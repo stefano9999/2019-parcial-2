@@ -8,7 +8,7 @@ class TestTelefono(unittest.TestCase):
         self.printer = Printer()
 
     def test_printer_available(self):
-        self.printer.printing = False
+        #Tener en cuenta que la impresora no esta imprimiendo
         self.assertTrue(self.printer.printer_available())
    
     def test_printer_not_available(self):        
@@ -20,13 +20,13 @@ class TestTelefono(unittest.TestCase):
         self.assertEqual(self.printer.queue_printer,['Printing example'])
     
     def test_printer_printing_job(self):
-        self.printer.queue_printer = ['Printing example']
+        # Tener en cuenta que la cola de impresion ya tiene 'printing example'
         self.printer.print_job()
         self.assertTrue(self.printer.printing)
         self.assertEqual(self.printer.queue_printer,[])
     
     def test_printer_nothing_to_print(self):
-        self.printer.queue_printer = []
+        #Tener en cuenta que la cola de impresion esta vacia
         self.printer.print_job()
         self.assertTrue(self.printer.error_flag)
         self.assertEqual(self.printer.error_description,'nothing to print')

@@ -92,7 +92,7 @@ class Test_printer(unittest.TestCase):
         self.assertTrue(self.printer.printing)
         self.assertEqual(len(self.printer.queue_printer), len(self.print_jobs) - 2)
 
-        # resetear la impresora
+        # resetear la impresora #
         self.printer.reset_printer()
         self.assertFalse(self.printer.printing)
 

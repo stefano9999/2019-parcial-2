@@ -14,7 +14,7 @@ class TestImpresora(unittest.TestCase):
 
     def test_correcta_impresion(self):
         self.assertTrue(self.impresora.printer_available())
-        self.impresora.add_print_job(['Hola mundo', 'Hola mundo 2'])
+        self.impresora.add_print_job(['Hola ', 'Holaaa'])
         self.impresora.print_job()
         self.assertFalse(self.impresora.error_flag)
         self.assertTrue(self.impresora.printing)

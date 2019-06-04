@@ -20,7 +20,7 @@ class TestTelefono(unittest.TestCase):
         self.assertEqual(self.printer.queue_printer,['Printing example'])
     
     def test_printer_printing_job(self):
-        # Tener en cuenta que la cola de impresion ya tiene 'printing example'
+        self.printer.queue_printer = ['Printing example']
         self.printer.print_job()
         self.assertTrue(self.printer.printing)
         self.assertEqual(self.printer.queue_printer,[])

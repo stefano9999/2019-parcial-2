@@ -8,8 +8,11 @@ class Telefono:
         self.credito += credito
     
     def dial(self, nume):
-        if len(nume) == 3 and (nume[0] == '9' or nume[0] == '8'):
-            return True
+        if len(nume) == 3:
+            if (nume[0] == '9' or nume[0] == '8'):
+                return True
+            else:
+                return False
         
         if len(nume) == 7:
             if self.credito < 10:
@@ -18,7 +21,7 @@ class Telefono:
                 self.credito -= 10
                 return True
         
-        if nume[0] == '0' and nume [1] == '0':
+        if nume[0:2] == '00':
             if self.credito < 100:
                 return False
             else:

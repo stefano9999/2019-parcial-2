@@ -1,3 +1,4 @@
+#Juan I. Martinez, legajo 57018
 class Telefono(object):
 
     def __init__(self):

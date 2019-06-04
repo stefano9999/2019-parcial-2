@@ -1,3 +1,4 @@
+#Juan I. Martinez, legajo 57018
 # Administración manual de impresora
 
 class Printer:

@@ -38,7 +38,7 @@ class Printer:
 
     def print_job(self):
 
-        if self.queue_printer.count == 0:
+        if len(self.queue_printer) == 0:
 
             self.error_flag = True
 
